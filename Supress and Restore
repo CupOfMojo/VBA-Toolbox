@@ -1,0 +1,16 @@
+Sub Supress()
+    With Application
+        .StatusBar = "Wait"
+        .ScreenUpdating = False
+        .DisplayAlerts = False
+    End With
+End Sub
+
+Sub Restore()
+    With Application
+        .StatusBar = ""
+        .ScreenUpdating = True
+        .DisplayAlerts = True
+        .CutCopyMode = False
+    End With
+End Sub
