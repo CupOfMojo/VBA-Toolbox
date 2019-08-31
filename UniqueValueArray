@@ -1,0 +1,17 @@
+Sub UniqueValueArray()
+Dim tmp As String, cell As Variant, lastRow As Long, arr() As String, rng As Range
+   
+    lastRow = shCODENAME.Cells(Rows.Count, 2).End(xlUp).Row
+    Set rng = shCODENAME.Range("B2:B" & lastRow)
+
+    If Not rng Is Nothing Then
+        For Each cell In rng
+            If (cell <> "") And (InStr(tmp, cell) = 0) Then
+                tmp = tmp & cell & ","
+            End If
+        Next cell
+    End If
+    
+    If Len(tmp) > 0 Then tmp = Left(tmp, Len(tmp) - 1)
+    arr = Split(tmp, ",")
+End Sub
