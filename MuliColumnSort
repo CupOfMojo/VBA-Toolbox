@@ -1,0 +1,9 @@
+Sub MuliColumnSort()
+    With shCODENAME
+        With .Range("A1").CurrentRegion
+            .Cells.Sort Key1:=.Range("C1"), Order1:=xlAscending, _
+                        Key2:=.Range("A1"), Order2:=xlAscending, _
+                        Orientation:=xlTopToBottom, Header:=xlYes
+        End With
+    End With
+End Sub
