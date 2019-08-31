@@ -1,0 +1,10 @@
+Sub AdvFilter()
+Dim rngData As Range, rngCriteria As Range, rngOutput As Range
+    Set rngData = shCODENAMEdatasheet.Range("A1").CurrentRegion
+    Set rngCriteria = shCODENAMEfilter_template.Range("A1").CurrentRegion
+    Set rngOutput = shCODENAMEoutput_destination.Range("A1").CurrentRegion
+
+    rngData.AdvancedFilter xlFilterCopy, rngCriteria, rngOutput
+
+
+End Sub
