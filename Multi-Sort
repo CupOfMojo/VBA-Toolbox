@@ -1,0 +1,17 @@
+Sub SortQueries()
+'sorts Customer Rebate Query and Admin Fee Query tabs by vendor name and period
+    With shCRQ
+        With .Range("A1").CurrentRegion
+            .Cells.Sort Key1:=.Range("C1"), Order1:=xlAscending, _
+                        Key2:=.Range("A1"), Order2:=xlAscending, _
+                        Orientation:=xlTopToBottom, Header:=xlYes
+        End With
+    End With
+    With shAFQ
+        With .Range("A1").CurrentRegion
+            .Cells.Sort Key1:=.Range("C1"), Order1:=xlAscending, _
+                            Key2:=.Range("A1"), Order2:=xlAscending, _
+                            Orientation:=xlTopToBottom, Header:=xlYes
+        End With
+    End With
+End Sub
